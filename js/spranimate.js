@@ -1,13 +1,13 @@
 /**
  * Takes a boring spritesheet and turns it into glorioud animated content!
  *
- * @param {HTMLImageElement} HTMLImageElement The spritesheet to animate
  * @param {object} userOptions     Options for the sprite
  *                                 + height: Height of the sprite
  *                                 + width: Width of the sprite
  *                                 + framerate: The framerate of the animation
+ * @return HTMLDivElement
  */
-function Spranimate(HTMLImageElement, userOptions) {
+HTMLImageElement.prototype.spranimate = function(userOptions) {
 	var options = {
 		height: 32,
 		width: 32,
@@ -16,7 +16,7 @@ function Spranimate(HTMLImageElement, userOptions) {
 
 	var spranimate = this;
 
-	var sprite = '';
+	var sprite = document.createElement("DIV");
 	var columns = 0;
 	var rows = 0;
 
@@ -33,7 +33,7 @@ function Spranimate(HTMLImageElement, userOptions) {
 		options[o] = userOptions[o];
 	}
 
-	var spritesheet = HTMLImageElement;
+	var spritesheet = this;
 
 	/**
 	 * Calculate the number of frames in the spritesheet.
@@ -47,7 +47,6 @@ function Spranimate(HTMLImageElement, userOptions) {
 	 * Replaces the spritesheet image with the sprite div that we animate
 	 */
 	function createSprite() {
-		sprite = document.createElement("DIV");
 		sprite.style.width = options.width + "px";
 		sprite.style.height = options.height + "px";
 		sprite.style.backgroundImage = 'url("'+spritesheet.src+'")';
@@ -92,4 +91,6 @@ function Spranimate(HTMLImageElement, userOptions) {
 	} else {
 		spritesheet.onload = setUp;
 	}
-}
+
+	return sprite;
+};

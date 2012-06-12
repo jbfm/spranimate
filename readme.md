@@ -8,10 +8,13 @@ It's very basic now, I plan on expanding it if I can.
 
 #Usage
 -----------
-Spranimate takes two parameters, `HTMLImageElement`, the spritesheet to animate, and `options`, an object of options. All three options shown in the example files.
+Spranimate takes one parameter, `options`, an object of options. All three options shown in the example files.
+Spranimate extends `HTMLImageElement`.
+
+Spranimate returns a `HTMLDivElement` in case you want to manipulate the animation after initializing it.
 
 ```javascript
-Spranimate(document.getElementById("image"), {
+HTMLImageElement.spranimate({
 	height: 16,
 	width: 16,
 	framerate: 10
