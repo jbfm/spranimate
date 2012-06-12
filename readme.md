@@ -1,14 +1,14 @@
 #spranimate
 -----------
 ###Ever wanted to take an ordinary, boring spritesheet and turn it into a glorious, animated wonder?
-Then then spranimate is for you!
+Then spranimate is for you!
 This is not something to be used in games, it's simply a script to make nice presentations for your spritesheets
 
 It's very basic now, I plan on expanding it if I can.
 
 #Usage
 -----------
-Spranimate takes two parameters, `htmlImageObject`, the spritesheet to animate, and `options`, an object of options. All three options shown in the example files.
+Spranimate takes two parameters, `HTMLImageElement`, the spritesheet to animate, and `options`, an object of options. All three options shown in the example files.
 
 ```javascript
 Spranimate(document.getElementById("image"), {

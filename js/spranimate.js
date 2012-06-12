@@ -1,13 +1,13 @@
 /**
  * Takes a boring spritesheet and turns it into glorioud animated content!
  *
- * @param {HTMLImageObject} htmlImageObject The spritesheet to animate
+ * @param {HTMLImageElement} HTMLImageElement The spritesheet to animate
  * @param {object} userOptions     Options for the sprite
  *                                 + height: Height of the sprite
  *                                 + width: Width of the sprite
  *                                 + framerate: The framerate of the animation
  */
-function Spranimate(htmlImageObject, userOptions) {
+function Spranimate(HTMLImageElement, userOptions) {
 	var options = {
 		height: 32,
 		width: 32,
@@ -33,7 +33,7 @@ function Spranimate(htmlImageObject, userOptions) {
 		options[o] = userOptions[o];
 	}
 
-	var spritesheet = htmlImageObject;
+	var spritesheet = HTMLImageElement;
 
 	/**
 	 * Calculate the number of frames in the spritesheet.
