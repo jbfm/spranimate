@@ -2,7 +2,7 @@
 -----------
 ###Ever wanted to take an ordinary, boring spritesheet and turn it into a glorious, animated wonder?
 Then spranimate is for you!
-This is not something to be used in games, it's simply a script to make nice presentations for your spritesheets
+This is not something to be used in games, it's simply a script to make nice presentations for your spritesheets.
 
 It's very basic now, I plan on expanding it if I can.
 
